@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<script type="text/javascript">
+			var a = 0;
+			var b = 0;
+			function lbw(){
+				a = prompt("输入第一个数");
+				b = prompt("输入第二个数");
+				var sb = lhp(prompt("输入运算符:"));
+				alert("两数运算结果为:"+sb);
+			}
+			
+			function lhp(id){
+				var sum = 0;
+				switch (id){
+					case '+':
+						if(a != Number && b != Number){
+							sum = eval(a+"+"+b);
+						}
+						break;
+					case '-':
+						sum = a-b;
+						break;
+					case '*':
+					sum = a*b;
+						break;
+					case '/':
+					sum = a/b;
+						break;
+					default:
+						alert("输入错误");
+						break;
+				}
+				return sum;
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" name="sb" id="sb" value="计算两数运算" onclick="lbw()" />
+		
+		<script type="text/javascript">
+			console.log('123')
+		</script>
+		
+	</body>
+</html>

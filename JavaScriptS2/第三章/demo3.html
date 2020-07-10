@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul id="nodeList"><li>nodeName</li><li>nodeValue</li><li>nodeType</li></ul><p></p>
+		<script type="text/javascript">
+			var nodes = document.getElementById("nodeList");
+			var type1 = nodes.firstChild.nodeType;
+			var type2 = nodes.firstChild.firstChild.nodeType;
+			var name1 = nodes.firstChild.firstChild.nodeName;
+			var str = nodes.firstChild.firstChild.nodeName;
+			var con = type1+","+type2+","+name1+","+str;
+			document.getElementById("nodeList").nextSibling.innerHTML=con;
+		</script>
+	</body>
+</html>

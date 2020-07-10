@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+<body>
+    <div id="demo">
+       性: <input type="text" placeholder="Name" v-model="list"> <br>
+       名 :<input type="text" placeholder="Name2" v-model="first"> <br>
+       姓名1(单向) :<input type="text" placeholder="Full Name" v-model="fullName1"> <br>
+       姓名2(单向) : <input type="text" placeholder="Full Name1"> <br>
+       姓名3(双向) : <input type="text" placeholder="Full Name2">
+    </div>
+	
+	<script type="text/javascript">
+		new Vue({
+			el: "#demo",
+			data: {
+				list: "A",
+				first: "B"
+			},
+			computed: {
+				fullName1 (){
+					// console.log('fullName1')
+					return this.list + '  ' + this.first
+				}
+			}
+		})
+	</script>
+</body>
+</html>

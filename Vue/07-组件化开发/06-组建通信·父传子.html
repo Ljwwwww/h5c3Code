@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>驼峰标识的问题</title>
+	</head>
+	<body>
+	  <div id="app">
+		  <!-- 驼峰变量使用的时候用-分割 -->
+	  	<cpn :c-info="info" :child-my-messges="123"></cpn>
+	  </div>
+	  
+	  <template id="cpn">
+	  		  <div>
+	  		  	<p>{{ cInfo }}</p>
+				<p>{{ childMyMessges }}</p>
+	  		  </div>
+	  </template>
+	  <script type="text/javascript" src="../js/vue.js"></script>
+	  <script type="text/javascript">
+		const cpn = {
+			template: '#cpn',
+			props: {
+				cInfo: {
+					type: Object,
+					default() {
+						return {}
+					}
+				},
+				childMyMessges: {
+					type: String,
+					default: '默认值'
+				}
+			}
+		}
+		  
+		const app = new Vue({
+		  el: '#app',
+		  data: {
+			info: {
+				name: '卢本伟',
+				age: 18,
+				heigh: 1.88
+			}
+		  },
+		  components: {
+			  cpn
+		  }
+		})
+	  </script>
+	</body>
+</html>

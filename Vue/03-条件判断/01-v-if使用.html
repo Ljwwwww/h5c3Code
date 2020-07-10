@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+		  <h2 v-if="isShow">
+			<div>{{ messgs }}</div>
+			<div>{{ messgs }}</div>
+			<div>{{ messgs }}</div>
+			<div>{{ messgs }}</div>
+			<div>{{ messgs }}</div>
+		  </h2>
+		</div>
+		
+		<script type="text/javascript" src="../js/vue.js"></script>
+		<script type="text/javascript">
+			var app = new Vue({
+			  el: '#app',
+			  data: {
+			    messgs: 'messgs',
+				isShow: true,
+			  }
+			})
+		</script>
+	</body>
+</html>

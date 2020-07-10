@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function student(){
+				this.name = "卢本伟"
+			}
+			/*原型对象*/
+			student.prototype.Person="刘少杰";
+			student.prototype.show = function(){
+				document.write(a.Person);
+			}
+			student.prototype.name = function(){
+				return this.name;
+			}
+			
+			var a = new student();
+			a.show();
+			document.write(a.name);
+		</script>
+	</body>
+</html>

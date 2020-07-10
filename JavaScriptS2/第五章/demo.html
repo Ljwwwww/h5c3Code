@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>点击字体切换颜色</title>
+		
+		<style type="text/css">
+			li{
+				list-style: none;
+				line-height: 22px;
+				cursor: help;
+			}
+			.lbw{
+				background: #666666;
+				font-weight: bold;
+				color: #FFFFFF;
+			}
+		</style>
+	</head>
+	<body>
+		<script src="../js/jquery-1.12.4.js" type="text/javascript"></script>
+		<ul>
+			<li style="list-style: none;" id="sb">jQuery介绍</li>
+		</ul>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				/*鼠标点击触发*/
+				$("li").click(function(){
+					/*添加一个类选择器名*/
+					$("#sb").addClass("lbw");
+				});
+			});
+		</script>
+	</body>
+</html>

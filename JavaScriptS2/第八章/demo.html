@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="radio" name="1" id="1" value="" />1
+		<input type="radio" name="1" id="1" value="" />2
+		
+		<script src="../js/jquery-1.12.4.js"></script>
+		<script>
+			$(function(){
+				$("input").click(function(){
+					var a=$("input:radio[name:1]").val();
+					alert(a);
+				});
+			});
+		</script>
+	</body>
+</html>

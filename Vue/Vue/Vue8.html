@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>对象语法</title>
+		<script type="text/javascript" src="../js/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+		  <h2 :style="{fontSize: '60px'}">{{ message }}</h2>
+		  
+		  <h2 :style="{fontSize: fianlSize,color: color}">{{ message }}</h2>
+		  
+		 <h2 :style="getColo()">{{ message }}</h2>
+		 
+		 <h2 :style="[filySize]">{{ message }}</h2>
+		</div>
+		
+		<script>
+			var app = new Vue({
+			  el: '#app',
+			  data: {
+				message: 'Hello Vue!',
+				fianlSize: '60px',
+				color: 'red',
+				filySize: {fontSize: '100px'}
+			  },
+			  methods: {
+				  getColo: function(){
+					  return {fontSize: this.fianlSize,color: this.color};
+				  }
+			  }
+			})
+		</script>
+	</body>
+</html>

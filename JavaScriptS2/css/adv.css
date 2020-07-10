@@ -1,0 +1,13 @@
+#sg{
+	width: 258px;
+	height: 100px;
+	margin-top: 10px;
+	background: #999999;
+}
+#sg h1{
+	padding: 0px;
+	margin: 0px;
+	text-align: center;
+	line-height: 100px;
+	color: #CCCCFF;
+}

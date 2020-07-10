@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#super{
+				width: 100px;
+				position: absolute;
+				left: 100px;
+				top: -10px;
+				border: 1px #666666 solid;
+			}
+			#super ul{
+				padding: 0px;
+				text-align: center;
+			}
+			#super ul li{
+				margin-bottom: 3px;
+			}
+			#super ul li a{
+				text-decoration: none;
+				color: #666666;
+				cursor: copy;
+			}
+		</style>
+	</head>
+	<body>
+		<p style="font-weight: bold; margin-top: 30px;" id="sb">崽总刘少杰</p>
+		<div id="super" style="display: none;">
+			<ul style="list-style: none;">
+				<li><a href="javascript:void(0)">刘少杰</a></li>
+				<li><a href="javascript:void(0)">刘狗杰</a></li>
+				<li><a href="javascript:void(0)">是傻逼</a></li>
+			</ul>
+		</div>
+		<script src="../js/jquery-1.12.4.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("p").mouseover(function(){
+					$("#super").show();
+				}).mouseout(function(){
+					$("#super").hide();
+				});
+				
+				$("a").css("color","red");
+				
+			});
+		</script>
+	</body>
+</html>

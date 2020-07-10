@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+		  {{ fullName }}
+		</div>
+		
+		<script type="text/javascript" src="../js/vue.js"></script>
+		<script type="text/javascript">
+			window.app = new Vue({
+				el: '#app',
+				data: {
+					firstName: 'Koba',
+					listName: 'Bryant',
+				},
+				computed: {
+					fullName: {
+						//set方法一般不常用
+						set: function(newValue){
+							console.log('----'+newValue);
+							const names = newValue.split(' ');
+							this.firstName = names[0];
+							this.listName = names[1];
+						},
+						get: function(){
+							return this.firstName+ '  ' +this.listName
+						}
+					},
+					// 上面代码相当于 ∨下面代码
+					// funllName: function(){
+					// 	return return this.firstName+ '  ' +this.listName
+					// }
+				}
+			})
+		</script>
+	</body>
+</html>

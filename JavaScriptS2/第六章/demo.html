@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>键盘事件</title>
+		<style type="text/css">
+			*{
+				color: #DDDDDD: ;;
+			}
+		</style>
+	</head>
+	<body>
+		用户名:<input type="text" id="name"/>
+		<br />密码:<input type="text" id="pwd"/>
+		<input type="submit" value="登陆"/>
+		<script type="text/javascript" src="../../JSp/js/jquery-1.12.4.js"></script>
+		<script type="text/javascript">
+			$(document).keydown(function(event){
+				/*获取按下那个键j*/
+				if(event.keyCode == "13"){
+					alert("提交???");
+				}
+			})
+		</script>
+	</body>
+</html>

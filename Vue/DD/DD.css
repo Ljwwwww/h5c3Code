@@ -1,0 +1,292 @@
+*{
+	padding: 0xp;
+	margin: 0px;
+}
+
+#logo{
+	width: 1000px;
+	height: 100px;
+	/*background: red;*/
+	margin: auto;
+	/*border-bottom:0.5px solid #000000 ;*/
+}
+#logo img{
+	float: left;
+	margin-left: 0px;
+	margin-top: 8px;
+}
+#logo input{
+	float: right;
+	font-size: 18px;
+	padding: 6px;
+	margin-top: 12px;
+	border-radius: 12px;
+	width: 60px;
+	background: #DF3540;
+	color: #FFFFFF;
+}
+#radio{
+	width: 1000px;
+	height: 1400px;
+	/*background: red;*/
+	margin: auto;
+	margin-top: 10px;
+}
+#all{
+	float: left;
+	/*background: #866D79;*/
+	width: 100%;
+	height: 20px;
+}
+#all ul{
+	float: left;
+}
+#all table{
+	float: left;
+}
+#all tr td{
+	border:0px solid #999;
+}
+#all img{
+	position: relative;
+	top: 1.5px;
+}
+#all a{
+	position: relative;
+	top: -1.5px;
+	color: #810808;
+	text-decoration: none;
+	font-weight:  bold;
+}
+#all a:hover{
+	text-decoration: underline;
+}
+#shop{
+	width: 100%;
+	height: 345px;
+	float: left;
+	/*background: #FF4E00;*/
+	margin-top: 10px;
+}
+#shop tr{
+	float: left;
+}
+#shop tr td{
+	margin-top: 8px;
+	float: left;
+	margin: 0xp;
+	padding: 0xp;
+	border:0px solid #999;
+}
+#shop tr td input{
+	float: left;
+	position: relative;
+	top: 40px;
+	margin-right: 12px;
+}
+#shop tr td img{
+	float: left;
+	height: 100px;
+	position: relative;
+	top: 3px;
+}
+#shop table{
+	float: left;
+	width: 100%;
+	height: 250px;
+	margin-top: 20px;
+	background: #FAFAFA;
+	border: 1px solid #EBEBEB;
+}
+#shop table tr td a{
+	float: left;
+	text-decoration: none;
+	color: #000000;
+	font-size: 15px;
+	margin-left: 30px;
+	margin-top: 12px;
+}
+#shop table tr td a:hover{
+	color: #FF2832;
+	text-decoration: none;
+}
+#shop table tr td span{
+	float: left;
+	position: relative;
+	left: 220px;
+	top: 45px;
+}
+.row{
+	margin-left: 20px;
+	float: left;
+}
+.amount{
+	float: left;
+	width: 120px;
+	height: 34px;
+	/*background: #333333;*/
+	margin-top: -3px;
+	margin-left: 82px;
+}
+.amount a{
+	text-align: center;
+	line-height: 30px;
+	float: left;
+	width: 28px;
+	height: 31px;
+	background: #C1C1C1;
+	text-decoration: none;
+}
+.amount a:nth-child(1){
+	position: relative;
+	left: -18px;
+	top: -10px;
+}
+.amount a:nth-child(3){
+	position: relative;
+	left: -14px;
+	top: -10px;
+}
+.amount a:hover{
+	background: #FFF5F5;
+	text-decoration: overline;
+}
+.amount input[type=text]{
+	width: 30px;
+	height: 25px;
+	float: left;
+	margin-top: -38px;
+	margin-left: -18px;
+	text-align: center;
+}
+#collect{
+	float:left;
+	width: 130px;
+	height: 50px;
+	/*background: red;*/
+	margin-left: 250px;
+	position: relative;
+	top: 30px;
+}
+#collect td{
+	float: left;
+}
+#collect a{
+	float: left;
+	position: relative;
+	top: -8px;
+}
+#accounts{
+	float: left;
+	width: 100%;
+	height: 66px;
+	background: #F8F8F8;
+	margin-top: -24px;
+}
+#accounts span input[type=checkbox]{
+	float: left;
+	margin-top: 3px;
+	/*margin-left: 50px;*/
+}
+#accounts span input[type=checkbox]:hover{
+	border: 1px solid red;
+}
+#accounts span{
+	float: left;
+	font-size: 12px;
+	margin-left: 50px;
+	margin-top: 23px;
+	color: #969696;
+}
+#accounts a{
+	float: left;
+	color: #000000;
+	text-decoration: none;
+	font-size: 12px;
+	/*margin-top: 23px;*/
+	line-height: 60px;
+	margin-left: 50px;
+}
+#accounts a:hover{
+	color: #FF2832;
+	text-decoration: underline;
+}
+#acquire{
+	float: left;
+	position: relative;
+	left: 30px;
+}
+.subtotal{
+	float: right;
+	width: 503px;
+	height: 60px;
+	/*background: #376C9C;*/
+	margin-top: 3px;
+	margin-right: 3px;
+}
+.subtotal p{
+	float: left;
+	width: 179px;
+	height: 30px;
+	/*background: red;*/
+	line-height: 25px;
+	margin-top: 15px;
+	margin-left: 120px;
+	
+}
+.subtotal p:nth-child(2){
+	float: none;
+	margin-top: 30px;
+}
+.subtotal p span{
+	line-height: 30px;
+}
+.subtotal p font{
+	color: #969696;
+	font-size: 12px;
+}
+.subtotal a{
+	width: 116px;
+	height: 40px;
+	background: #FF0000;
+	text-align: center;
+	line-height: 40px;
+	margin-top: 8px;
+}
+.subtotal a p{
+	color: #FFFFFF;
+	font-size: 18px;
+	line-height: 10px;
+	margin-left: -32px;
+}
+#wei{
+	position: absolute;
+	margin-left: 150px;
+	border: 1px solid #333333;
+}
+#san{
+	position: absolute;
+	margin-left: 150px;
+	margin-top: 120px;
+	border: 1px solid #333333;
+}
+#advertising{
+	width: 168px;
+	height: 193px;
+	position: fixed;
+	display: block;
+	left: 100px;
+	top: 200px;
+}
+#advertising a{
+	text-decoration: none;
+	position: relative;
+	top: -190px;
+	right: -133px;
+	color: #EBEBEB;
+	border: 1px solid #CCCCCC;
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-bottom: 4px;
+	background: #333333;
+}

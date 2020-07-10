@@ -1,0 +1,14 @@
+.{
+	margin: 0px;
+	padding: 0px;
+}
+#span{
+	width: 1000px;
+	height: 300px;
+	text-align: center;
+	margin: 20px auto;
+	background: #999999;
+}
+#span tr td{
+	float: left;
+}

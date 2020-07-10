@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//获取系统时间
+			/*document.write(new Date());*/
+			
+			function disptime(){
+				var today = new Date();
+			//var year = today.getYear();//年
+			var year = today.getFullYear();//年
+			var mon = today.getMonth()+1;//月
+			var day = today.getDate();//日
+			var hh = today.getHours();//小时
+			var mm = today.getMinutes();//分钟
+			var ss = today.getSeconds();//秒数
+			
+			document.getElementById("sj").innerHTML = year+"年"+mon+"月"+day+"日 "+hh+":"+mm+":"+ss;
+			}
+			
+			var shop;
+			function start(){
+				//按照指定的时间调用函数
+				shop = setInterval("disptime()",1000);
+			}
+			function sto(){
+				//停止调用
+				clearInterval(shop);
+			}
+			//刷新页面
+			function refresh_1(){
+				location.reload();
+				var a = document.getElementById("div1");
+				a.style.background = 'red';
+			}
+		</script>
+			<div id="sj"></div>
+			<button onclick="start()">开始</button>
+			<button onclick="sto()">关闭</button>
+			<button onclick="refresh_1()">刷新</button>
+			<div id="div1" style="width: 200px;height: 200px;"></div>
+	</body>
+</html>

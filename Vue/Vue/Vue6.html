@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript" src="../js/vue.js"></script>
+		<style>
+			.actir{
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<!-- 根据class判断是否存在 动态改变 -->
+			<h2 :class="{actir: isActir}">{{ msg }}</h2>
+			<h2 :class="getClass()">{{ msg }}</h2>
+			<button @click="btnClick">改变</button>
+		</div>
+		
+		<script>
+			 window.app = new Vue({
+				el: "#app",
+				data: {
+					msg: '你好呀',
+					isActir: true
+				},
+				methods: {
+					btnClick: function(){
+						this.isActir = !this.isActir;
+					},
+					getClass: function(){
+						return {actir: this.isActir};
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	  <div id="app">
+		  <!-- 像子组件传父组件的数据 -->
+		  <cpn :mssgis='msg' ></cpn>
+		  
+		  <cpn :mssgis='msg' :mvdicmain="mvdic"></cpn>
+	  </div>
+	  
+	  <template id="cpn">
+		  <div>
+		  	<ul>
+		  		<li v-for="lite in mvdicmain">{{ lite }}</li>
+		  	</ul>
+			<h2>{{ mssgis }}</h2>
+		  </div>
+	  </template>
+	  <script type="text/javascript" src="../js/vue.js"></script>
+	  <script type="text/javascript">
+		  // 父组件: props传值给子组件
+		  const cpn = {
+			  template: '#cpn',
+			  // props: ['mssgis','mvdicmain'],
+			  props: {
+				  // mssgis设置类型以及默认值(如没传递参数就会使用默认值)
+				  mssgis: {
+					  type: String,
+					  default: '傻逼',
+					  // 设置必传值如果为true使用时就必须传值
+					  required: true
+				  },
+				  mvdicmain: {
+					  type: Array,
+					  // vue2.5.17以下不能用
+					  // default: []
+					  default() {
+						  return []
+					  } 
+				  },
+				  
+			  }
+		  }
+		  
+		  const app = new Vue({
+			  el: `#app`,
+			  data: {
+				  msg: `Hello`,
+				  mvdic: ['海王','钢铁侠','丛林法则'] 
+			  },
+			  components: {
+				  cpn
+			  }
+		})
+	  </script>
+	</body>
+</html>

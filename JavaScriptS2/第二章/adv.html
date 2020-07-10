@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/adv.css"/>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function print(){
+				var h1= document.getElementsByTagName("h1")[0];
+				var h2 = document.getElementById("ww").value;
+			    if(h2 != ""){
+			    	h1.innerHTML = h2;
+			    }else{
+			    	alert("不能输出空值");
+			    }
+			}
+			
+			function shan(){
+				var pan = window.confirm("确认删除!");
+				if(pan){
+					document.getElementById("ww").value="";
+					document.getElementById("ss").innerText = "";
+				}else{
+					alert("取消删除");
+				}
+			}
+			
+		</script>
+		
+		<input type="text" name="ww" id="ww" value=""  />
+		<input type="button" name="" id="" value="输出" onclick="print()" />
+		<input type="button" name="shan" id="shan" value="删除" onclick="shan()" />
+		
+		<div id="sg">
+			<h1 id="ss"></h1>
+		</div>
+	</body>
+</html>

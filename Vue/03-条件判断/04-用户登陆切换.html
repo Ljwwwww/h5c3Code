@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+		  <span v-if="score">
+			  <label for="name">账号</label>
+			  <input type="text" name="" id="name" value="" placeholder="输入账户" key="name"/>
+		  </span>
+		  <span v-else>
+			  <label for="emaill">邮箱</label>
+			  <input type="text" name="" id="emaill" value="" placeholder="输入邮箱" key="emall"/>
+		  </span>
+		  <button type="button" @click="score = !score">切换</button>
+		</div>
+		
+		<script type="text/javascript" src="../js/vue.js"></script>
+		<script type="text/javascript">
+			var app = new Vue({
+			  el: '#app',
+			  data: {
+			    score: true
+			  }
+			})
+		</script>
+	</body>
+</html>

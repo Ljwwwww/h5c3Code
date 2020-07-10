@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>选择显示图片</title>
+		<script type="text/javascript">
+			function show(){
+				var zu = ["laoxue","bohao"];
+				var dor = document.getElementsByName("xue");
+				var img = document.getElementById("divshow");
+				for(var i=0; i < dor.length; i++){
+					if (dor[i].checked) {
+						img.setAttribute("src","../img/"+zu[i]+".png");
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="radio" name="xue" id="xue" value="" onclick="show()"/>老薛
+		<input type="radio" name="xue" id="xue" value="" onclick="show()"/>柏豪
+		<p>
+			<img id="divshow"/>
+		</p>
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>点击显示介绍</title>
+		<style type="text/css">
+			*{
+				margin: 12px;
+			}
+			h2{
+				width: 130px;
+			}
+			p{
+				width: 260px;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<script src="../../JSp/js/jquery-1.12.4.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("h2").click(function(){
+					$("h2").css("background","#336699").next().css("display","block");
+				})
+			})
+		</script>
+		
+		<h2>jQuery介绍</h2>
+		<p><strong>解答:</strong>jQuery是一个快速、简洁的JavaScript框架，是继Prototype之后又一个优秀的JavaScript代码库（或JavaScript框架）。jQuery设计的宗旨是“write Less，Do More”，即倡导写更少的代码，做更多的事情。它封装JavaScript常用的功能代码，提供一种简便的JavaScript设计模式，优化HTML文档操作、事件处理、动画设计和Ajax交互。</p>
+	</body>
+</html>

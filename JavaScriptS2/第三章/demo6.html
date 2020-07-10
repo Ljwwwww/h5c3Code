@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>节点样</title>
+		<link rel="stylesheet" type="text/css" href="css/demo6css.css"/>
+		<!--<script src="js/demo6js.js" type="text/javascript" charset="utf-8"></script>-->
+	</head>
+	<body>
+		
+		<a href="javascript:void(0)" id="cs" onmouseover="dian()">测试</a>
+		<br />
+		<br />
+		<section id="shop">
+			<a href="javascript:void(0)" id="gou" onmouseover="out()" onmouseout="ove()">我的购物车</a>
+			<div id="dan">
+				<h3>最新加入的商品</h3>
+				<ul id="sb">
+					<li>傻逼刘少杰</li>
+					<li>白给佬</li>
+					<li>闸总</li>
+				</ul>
+				<div id="foot">
+					<span id="">购物车</span>
+				</div>
+			</div>
+		</section>
+		
+		<script type="text/javascript">
+			document.getElementById("dan").style.display="none";
+			function out(){
+				document.getElementById("dan").style.display="block";
+			}
+			
+			function ove(){
+				document.getElementById("dan").style.display="none";
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>图片切换</title>
+		<style type="text/css">
+			div{
+				width: 520px;
+				height: 350px;
+			}
+			ul{
+				position: relative;
+				left: 85px;
+				top: -90px;
+			}
+			ul li{
+				width: 22px;
+				height: 22px;
+				float: left;
+				list-style: none;
+				margin: 25px;
+				border-radius: 22px;
+				background: #333333;
+				line-height: 22px;
+				text-align: center;
+				cursor: pointer;
+				color: #FFFFFF;
+			}
+			strong{
+				font-size: 28px;
+				width: 40px;
+				height: 50px;
+				background: #AAAAAA;
+				float: left;
+				text-align: center;
+				line-height: 50px;
+			}
+			#left{
+				position: absolute;
+				top: 180px;
+				display: none;
+				cursor: pointer;
+				opacity:0.6;
+			}
+			#right{
+				position: relative;
+				left: 152px;
+				top: -189px;
+				display: none;
+				cursor: pointer;
+				opacity:0.6;
+			}
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript"  src="../../JSp/js/jquery-1.12.4.js"></script>
+		<script type="text/javascript">
+			/*存储图片名称*/
+			var num = ["0.webp","1.jpg","2.webp","3.jpg"];
+			/*默认显示图片*/
+			$(function(){
+				xuan = 1;
+				$("div").css("background-image","url(../img/"+num[0]+")");
+				$("li:nth-child(1)").css("background","#999999");
+			})
+			/*鼠标放上图片触发左右切换*/
+			$(function(){
+				$("div").mousemove(function(){
+					$("strong").show();
+				}).mouseout(function(){
+					$("strong").hide();
+				})
+			})			
+			$(function(){
+				$("strong").mousemove(function(){
+					$("strong").show();
+				}).mouseout(function(){
+					$("strong").hide();
+				})
+			})
+			
+			/*根据选图切换*/
+			$(function(){
+				$("li").click(function(){
+					//利用index获取li的索引值
+					var indexes = $(this).index();
+					/*根据选择切换图片*/
+					$("div").css("background-image","url(../img/"+num[indexes]+")");
+					/*获取当前li元素改变背景颜色改变*/
+					$("li:nth-of-type("+(indexes+1)+")").css("background","#999999");
+					/*获取li当前元素的其他兄弟元素将颜色背景改变*/
+					$("li:nth-of-type("+(indexes+1)+")").siblings().css("background","#333333");
+					/*将已选中的图片索引保存*/
+					xuan = indexes + 1;
+					img = indexes;
+				})
+			})
+			
+			//用于保存第几个图片已被选中
+			var xuan;
+			//存放图片路径
+			var img;
+			/*实现右切换功能*/
+			$(function(){
+				$("#right").click(function(){
+					/*判断是不是最后一张图片
+					    是的话的切右变回第一张*/
+					if (xuan == 4) {
+						$("div").css("background-image","url(../img/"+num[0]+")");
+						/*获取当前li元素改变背景颜色改变*/
+						$("li:nth-of-type("+1+")").css("background","#999999");
+						/*获取li当前元素的其他兄弟元素将颜色背景改变*/
+						$("li:nth-of-type("+1+")").siblings().css("background","#333333");
+						xuan = 1;
+						img = 0;
+						return;
+					}
+					
+					xuan++;
+					img = xuan - 1;
+					$("div").css("background-image","url(../img/"+num[img]+")");
+					/*获取当前li元素改变背景颜色改变*/
+					$("li:nth-of-type("+xuan+")").css("background","#999999");
+					/*获取li当前元素的其他兄弟元素将颜色背景改变*/
+					$("li:nth-of-type("+xuan+")").siblings().css("background","#333333");
+				})
+			})
+			
+			/*实现左切换功能*/
+			$(function(){
+				$("#left").click(function(){
+					/*判断是不是最第一张图片
+					    是的话的切右变回最后一张*/
+					if (xuan == 1) {
+						$("div").css("background-image","url(../img/"+num[3]+")");
+						/*获取当前li元素改变背景颜色改变*/
+						$("li:nth-of-type("+4+")").css("background","#999999");
+						/*获取li当前元素的其他兄弟元素将颜色背景改变*/
+						$("li:nth-of-type("+4+")").siblings().css("background","#333333");
+						xuan = 4;
+						img = 3;
+						return;
+					}
+					
+					xuan--;
+					img = xuan - 1;
+					$("div").css("background-image","url(../img/"+num[img]+")");
+					/*获取当前li元素改变背景颜色改变*/
+					$("li:nth-of-type("+xuan+")").css("background","#999999");
+					/*获取li当前元素的其他兄弟元素将颜色背景改变*/
+					$("li:nth-of-type("+xuan+")").siblings().css("background","#333333");
+				})
+			})
+		</script>
+		
+		
+		
+		
+		<div id="sb"></div>
+		<strong id="left"><</strong>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+		<strong id="right">></strong>
+	</body>
+</html>

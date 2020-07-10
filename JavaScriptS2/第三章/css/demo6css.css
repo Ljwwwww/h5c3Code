@@ -1,0 +1,23 @@
+#shop a{
+	border: 2px solid #AAAAAA;
+	text-decoration: none;
+	text-align: center;
+	padding: 12px;
+}
+#dan{
+	width: 250px;
+	height: 148px;
+	background: #336699;
+	margin-top: -7px;
+}#dan h3{
+	border-bottom: 1px dashed #CCCCCC;
+	padding: 5px;
+}
+#sb{
+	list-style: none;
+}
+#foot{
+	width: 100%;
+	height: 20px;
+	background: #C1C1C1;
+}

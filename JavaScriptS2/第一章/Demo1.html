@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var a = prompt("输入时间(**/时):");
+			if(a >= 6 && a <= 12){
+				document.write("上午好!<br />");
+				for (var i=0;i < 6; i++) {
+					document.write("<img src='img/smile.gif' />");
+				}
+			}else if(a > 12 && a <= 20){
+				document.writeln("下午好!");
+				for (var i=0;i < 6; i++) {
+					document.write("<img src='img/aftermoon.gif' />");
+				}
+			}else{
+				document.writeln("夜深了!")
+				for (var i=0;i < 6; i++) {
+					document.write("<img src='img/moon.gif' />")
+				}
+			}
+		</script>
+	</body>
+</html>

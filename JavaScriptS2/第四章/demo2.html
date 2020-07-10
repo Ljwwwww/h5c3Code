@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*创建构造函数Person*/
+			function Person(nation,skincolor){
+				this.nation = nation;
+				this.skinColor = skincolor;
+				Person.prototype.show = function(){
+					document.write(nation);
+				}
+				Person.prototype.show_one = function(){
+					document.write(skincolor);
+				}
+				/*定义一个函数子类重写*/
+				Person.prototype.showsex = function(){
+					return this.sex;
+				}
+			}
+			
+			/*创建构造函数Woman*/
+			function Woman(name,age){
+				//调用父类构造函数
+				Person.call(this,name,age);
+				this.sex = 5;
+			}
+			/*子类不能使用自己的特有方法94*/
+			/*Woman.prototype.showsex= function(){
+				return this.sex;
+			}*/
+			
+			/*继承Person方法*/
+			Woman.prototype = new Person();
+			var a = new Woman("卢本伟","傻逼");
+			a.show();
+			document.write(a.showsex());
+			a.show_one();
+		</script>
+	</body>
+</html>

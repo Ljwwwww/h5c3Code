@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+		  <!-- 1. .stop修饰符的使用 -->
+		  <div @click="divClick">
+			aaaaa
+		  	<button type="button" @click.stop="btnClick">123</button>
+		  </div>
+		  
+		  <!-- 2. .prevent的使用 -->
+		  <form action="baidu">
+		  	<input type="submit" value="提交" @click.prevent="subClick"/>
+		  </form>
+		  
+		  <!-- 3. .监听键盘键帽 -->
+		  <input type="text" @keyup.enter="keyUp" />
+		  
+		  <!-- 4. once修饰符使用 -->
+		  <button type="button" @click.once="btn2Click">点击</button>
+		</div>
+		
+		<script type="text/javascript" src="../js/vue.js"></script>
+		<script type="text/javascript">
+			var app = new Vue({
+			  el: '#app',
+			  data: {
+			    Lebron: 'Lebron',
+				James: 'James',
+			  },
+			  methods: {
+				  divClick() {
+					  console.log('divClick');
+				  },
+				  btnClick() {
+					  console.log('btnClick');
+				  },
+				  subClick() {
+					  console.log("subCLick");
+				  },
+				  keyUp() {
+					  console.log('keyUp');
+				  },
+				  btn2Click() {
+					  console.log('btn2Click');
+				  }
+				  
+			  }
+			})
+		</script>
+	</body>
+</html>

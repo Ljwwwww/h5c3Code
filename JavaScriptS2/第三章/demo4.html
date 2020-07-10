@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<script type="text/javascript">
+			//创建节点
+			function newNode1() {
+				var txt = document.getElementById("divshow");
+				var anode = document.createElement("a");
+				var tex = document.createTextNode("傻逼");
+				anode.appendChild(tex);
+				anode.setAttribute("href","http://www.qq.com");
+				anode.setAttribute("target","_blank");
+				txt.appendChild(anode);
+			}
+			//复制节点
+			function fu(){
+				var a = document.getElementById("fuzhi");
+				var b = a.cloneNode(true);
+				divshow.appendChild(b);
+			}
+			//删除节点
+			function remove(){
+				var a = document.getElementById("shan");
+				a.removeChild(a);
+			}
+			//替换节点
+			function ti(){
+				var a = document.getElementById("huan");
+				var b = document.createElement("button");
+				a.parentNode.replaceChild(b,a);
+				
+			}
+		</script>
+
+		
+	</head>
+	<body>
+		<button onclick="newNode1();">创建节点</button>
+		<button onclick="fu();" id="fuzhi">复制节点 </button>
+		<button onclick="remove();" id="shan">删除节点</button>
+		<button onclick="ti()" id="huan">替换节点</button>
+		
+		<div id="divshow"></div>
+	</body>
+</html>

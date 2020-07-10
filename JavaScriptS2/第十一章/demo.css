@@ -1,0 +1,169 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+#taskbar{
+	float: left;
+	width: 100%;
+	height: 35px;
+	background: #F9F9F9;
+}
+#taskbar .header_top_left{
+	line-height: 35px;
+	float: left;
+	font-size: 14px;
+}
+#taskbar ul{
+	float: right;
+	list-style: none;
+	line-height: 35px;
+}
+#taskbar ul li{
+	float: left;
+	margin-left: 5px;
+	font-size: 14px;
+}
+#taskbar ul li #img{
+	margin-top: 9px;
+}
+#taskbar ul li a{
+	text-decoration: none;
+}
+#one{
+	/*background: #999999;*/
+	width: 50%;
+	height: 35px;
+	margin-left: 25%;
+}
+#input{
+	float: left;
+	width: 50%;
+	height: 100px;
+/*	background: #999999;*/
+	margin-left: 25%;
+}
+#input img{
+	float: left;
+	margin-top: 26px;
+	height: 38px;
+}
+#input input[type="text"]{
+	width: 580px;
+	float: left;
+	margin-top: 30px;
+	margin-left: 32px;
+	height: 32px;
+	border: 2px solid #49BAFC;
+}
+#input input[type="button"]{
+	background: url(shiimg/search.jpg) no-repeat;
+	width: 125px;
+	height: 40px;
+	margin-top: 28px;
+	border-radius: 5px;
+}
+#form{
+	float: left;
+	width: 100%;
+	height: 40px;
+	background: #49BAFC;
+}
+#form ul{
+	list-style: none;
+	text-align: center;
+	margin-left: 24.5%;
+}
+#form ul li{
+	padding: 10px;
+	float: left;
+	width: 100px;
+}
+#form ul li a{
+	text-decoration: none;
+	color: #FFF5F5;
+	font-weight: bolder;
+}
+#form ul li:hover{
+	background: #2487C1;
+	text-decoration: underline;
+}
+#book_sort{
+	float: left;
+	border: 1px solid #999999;
+	font-size: 16px;
+}
+#book_sort a{
+	text-decoration: none;
+	color: #000000;
+	font-size: 13px;
+}
+#book_sort a:hover{
+	text-decoration: underline;
+	color: #CCCCFF;
+}
+.book_sort_bg{
+	background: #D7EFF8 ;
+}
+.book_sort_bg img{
+	margin-left: 8px;
+}
+.book_sort_bottom{
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-bottom: 5px;
+}
+#tow{
+	float: left;
+	width: 960px;
+	height: 200px;
+	margin-left: 25%;
+	margin-top: 5px;
+}
+.scroll{
+	float: left;
+}
+.scroll ul{
+	list-style: none;
+}
+.scroll img{
+	float: left;
+	margin-left: 5px;
+	height: 190px;
+}
+#scroll_number{
+	float: left;
+}
+#scroll_number li{
+    width:28px;
+    height:28px;
+    border-radius: 50%;
+    text-align:center;
+    color: #fff;
+    margin-left:5px;
+    float: left;
+    font-size:16px;
+    font-weight: bold;
+    line-height:26px;
+    cursor:pointer;
+    background: #a9a9a9;
+}
+#scroll_number{
+    right:0;
+    position: relative;
+    bottom: 28px;
+    left: 380px;
+}
+#silder{
+	float: left;
+	border: 1px solid #999999;
+	margin-left: 24px;
+}
+#express{
+	float: left;
+	list-style: none;
+	font-size: 12px;
+	padding: 5px;
+}
+#express li{
+	margin-bottom: 3px;
+}

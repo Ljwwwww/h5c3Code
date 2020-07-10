@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>当当网</title>
+		<link rel="stylesheet" type="text/css" href="DD.css"/>
+	</head>
+	<body>
+		<!--
+        	作者：1519131840@qq.com
+        	时间：2019-06-04
+        	描述：固定广告
+        -->
+        <div id="advertising">
+        	<img id="s" src="../img/laoxue.png"/><a href="javascript:void(0)" onclick="xue_remove()">x</a>
+        </div>
+        <script src="../js/jquery-1.12.4.js"></script>
+        <script src="../layui-v2.5.4/layui/layui.js"></script>
+		<script src="DD.js" type="text/javascript" charset="utf-8"></script>
+		<div id="logo">
+			<img src="http://img63.ddimg.cn/upload_img/00728/4/DangDanglogoNEW-1531446546.gif"/>
+			<input type="button" name="close_bi" id="close_bi" value="关闭" onclick="close_bi()"/>
+		</div>
+		<div id="radio">
+			<div id="all">
+				<br />
+				<table border="" cellspacing="" cellpadding="" frame=void>
+					<tr>
+						<td><input type="checkbox" name="ck" id="ck" value="" onclick="close_xuan();check_all1()"/></td>
+						<td><img src="../img/shop.png"/></td>
+						<td><a href="">当当自营店</a></td>
+					</tr>		
+				</table>			
+			</div>
+			<div id="shop">	
+				<table width="100%" border="" cellspacing="" cellpadding="">
+					<tr id="book">
+						<td><input type="checkbox" name="" id="shop1" value="" onclick="close_span();acquire_amount()" /></td>
+						<td style="margin-left: 20px;"><img src="../img/book.jpg" id="sb" onmouseover="dian()" onmouseout="dian_li()"/></td>
+						<img src="../img/book.jpg" id="wei"/>
+						<td><a href="">围城</a></td>
+						<td><span id="">￥38.00</span></td>
+						<td>
+							<span class="amount">
+								<a name="减少数量" href="javascript:void(0)" onclick="amount_minus(values_num);pitchon();acquire_amount()">-</a>
+								<input type="text" value="1" name="" id="values_num" value="" />
+								<a name="增加数量" href="javascript:void(0)" onclick="amount_add(values_num);pitchon1();acquire_amount()">+</a>  
+							</span>
+						</td>
+						<td class="row"><span id="money">￥38.00</span></td>
+						<td id="collect">
+							<a href="javascript:void(0)">移入收藏</a>
+							<br />
+							<a href="javascript:void(0)" onclick="remove_one()">删除</a>
+						</td>
+					</tr>
+					<tr id="book1" style="margin-top: 6px">
+						<td><input type="checkbox" name="" id="shop2" value="" onclick="close_span();acquire_amount()" /></td>
+						<td style="margin-left: 20px;"><img src="../img/book1.jpg" onmouseover="dian1()" onmouseout="dian_li1()"/></td>
+						<img src="../img/book1.jpg" id="san" />
+						<td><a href="">三体</a></td>
+						<td><span id="">￥28.00</span></td>
+						<td style="margin-left: -5px; float: left;">
+							<span class="amount">
+								<a name="减少数量" href="javascript:void(0)" onclick="amount_minus(values_num1);pitchon2();acquire_amount()">-</a>
+								<input type="text" value="1" name="" id="values_num1" />
+								<a name="增加数量" href="javascript:void(0)" onclick="amount_add(values_num1);pitchon3();acquire_amount()">+</a>   
+							</span>
+						</td>
+						<td class="row"><span id="money1">￥28.00</span></td>
+						<td id="collect">
+							<a href="javascript:void(0)">移入收藏</a>
+							<br />
+							<a href="javascript:void(0)" onclick="remove_two()">删除</a>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div id="accounts">
+				<span><input type="checkbox" name="" id="ckxuan" value="" onclick="close_xuan1();check_all();acquire_amount()" />全选</span>
+				<a href="javascript:void(0)" onclick="delete_batch()">批量删除</a>
+				<span id="acquire">
+					已选择
+					<font id="amount" color="red">0</font>
+					件商品
+				</span>
+				<div class="subtotal">
+					<p>
+						<span style="float: none;margin-left: -5px;">总计(不含运费):</span>	
+						<font id="price">￥0.00</font>
+					</p>
+					<a href="javascript:void(0)" onclick="settle_accounts();"><p>结算</p></a>
+				</div>
+			</div>
+		</div>
+	</body>

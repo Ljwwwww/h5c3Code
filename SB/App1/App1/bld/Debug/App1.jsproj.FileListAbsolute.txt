@@ -1,0 +1,9 @@
+F:\H5C3\SB\App1\App1\bin\Debug\resources.pri
+F:\H5C3\SB\App1\App1\bin\Debug\AppxManifest.xml
+F:\H5C3\SB\App1\App1\bin\Debug\App1.build.appxrecipe
+F:\H5C3\SB\App1\App1\bld\Debug\priconfig.xml
+F:\H5C3\SB\App1\App1\bld\Debug\layout.resfiles
+F:\H5C3\SB\App1\App1\bld\Debug\resources.resfiles
+F:\H5C3\SB\App1\App1\bld\Debug\pri.resfiles
+F:\H5C3\SB\App1\App1\bld\Debug\LanguageQualifiers.txt
+F:\H5C3\SB\App1\App1\bld\Debug\ProjectArchitectures.txt

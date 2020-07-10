@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+    </script>
+	</head>
+	<body>
+		<section id="news">
+			<header>京东快报<a href="#">更多 ></a></header>
+			<ul>
+				<li><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+			</ul>
+		</section>
+		
+		<script type="text/javascript">
+			var obj=document.getElementById("news");
+			var sar=obj.lastElementChild.firstChild.nextSibling.innerHTML;
+			alert(sar);
+			if(window.name == ""){
+			  console.log("首次被加载");
+			  window.name = "isReload";  // 在首次进入页面时我们可以给window.name设置一个固定值 
+			}else if(window.name == "isReload"){
+			   console.log("页面被刷新");
+			}
+		</script>
+		
+		
+	</body>
+</html>

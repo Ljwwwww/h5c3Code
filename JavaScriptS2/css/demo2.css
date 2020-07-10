@@ -1,0 +1,75 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+header{
+	padding: 5px 0; 
+	border-bottom: 1px solid #cecece;
+	margin-left: 12px;
+}
+header span{
+	display:inline-block; 
+	width: 220px; 
+	height: 50px; 
+	color: #fff; 
+	background: #009966; 
+	font-size: 18px; 
+	font-weight: bold; 
+	text-align: center;
+	line-height: 50px; 
+	border-radius: 8px; 
+	cursor: pointer;
+}
+#hurdle{
+	width: 520px;
+	height: 460px;
+	border: 1px solid #666666;
+	margin-top: 12px;
+	margin-left:82px;
+}
+.title{
+	margin: 12px;
+	width: 450px; 
+	height:30px; 
+	line-height: 30px; 
+	display: block; 
+	border: 1px #aaaaaa solid;
+	margin-bottom: 10px;
+}
+select{
+	width: 200px; 
+	height: 30px;
+}
+#text{
+	display: block;
+	margin: 12px;
+	width: 450px; 
+	height: 300px;
+}
+#btn{
+	width: 160px; 
+	height: 35px;
+	color: #fff; 
+	background: #009966; 
+	border: none; 
+	font-size: 14px; 
+	font-weight: bold; 
+	text-align: center; 
+	line-height: 35px; 
+	border-radius: 8px; 
+	cursor: pointer;
+	margin-left: 12px;
+}
+#cloes{
+	height: 35px;
+	width: 32px;
+	border-radius: 6px;
+	cursor: pointer;
+}
+#bbs section ul li{text-decoration: none;padding: 10px 0; border-bottom: 1px #999999 dashed;
+    overflow: hidden;}
+#bbs section ul li div{float: left; width: 60px; margin-right: 10px;}
+#bbs section ul li div img{ border-radius:50%; width: 60px;}
+#bbs section ul li h1{float: left; width: 520px; font-size: 16px; line-height: 35px;}
+#bbs section ul li p{color: #666666; line-height: 38px; font-size: 12px; margin-left: 12px;}
+#bbs section ul li p span{padding-right:20px;}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#tabs ul{
+				list-style: none;
+			}
+			#tabs ul li{
+				float: left;
+				margin-left: 20px;
+				 background:#fff;
+	            cursor:pointer;
+	            float:left;
+	            list-style:none;
+	            height:28px;
+	            line-height:28px;
+	            margin:0px 3px;
+	            border:1px solid #aaa;
+	            border-bottom:none;
+	            display:inline-block;
+	            width:60px;
+	            text-align:center;
+			}
+			#tabs ul li.on{
+				border-bottom:2px solid saddlebrown;
+			}
+			#gun{
+				margin-top: -8px;
+				margin-left: 43px;
+				width: 118px;
+				height: 80px;
+	            line-height:25px;
+	            border:1px solid #336699;
+	            border-top:none;
+	            padding:5px;
+	            overflow:hidden;
+			}
+			#tabs{
+	            /*width:290px;*/
+	            width: 100%;
+	            padding:5px;
+	            /*height:150px;*/
+	            height: 250px;
+	            margin:20px;
+	        }
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+			window.onload=function(){
+				var a = document.getElementsByTagName("li");
+				var oDivs = document.getElementsByTagName("div");
+				for(var i = 0,len = a.length;i < len;i++){
+   					a[i].index=i;
+					a[i].onclick=function(){
+						for (var n =0;n < len;n++) {
+							a[n].className="";
+						}
+						this.className="on";
+						if(this.index == 2){
+							oDivs[this.index].style.display="none";
+						}else{
+							oDivs[this.index].style.display="block";
+						}
+					}
+				}
+			}
+		</script>
+		
+		
+		
+		<!--h5-->
+		<div id="tabs">
+			<ul>
+				<li class="on">1</li>
+				<li>2</li>
+			</ul>
+			<br />
+			<br />
+			<div id="gun">
+				123<br />
+				456
+			</div>
+			</div>
+	</body>
+</html>

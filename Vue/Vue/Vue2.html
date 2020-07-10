@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+<body>
+
+    <div id="app">
+        <h2>1.双大括号表达式</h2>
+        <p>{{msg}}</p>
+        <p>{{msg.toUpperCase()}}</p>
+        <p v-text="msg"></p>
+        <p v-html="msg"></p>
+
+        <h2>2.指令一: 强制数据绑定</h2>
+        <img src="imgurl">
+        <img v-bind:src="imgurl">
+        <img :src="imgurl">
+
+        <h2>3.指令二: 绑定事件监听</h2>
+        <button v-on:click="text">123</button>
+        <button @click="text">123</button>
+    </div>
+
+    <script type="text/javascript">
+        new Vue({
+            el: "#app",
+            data: {
+                msg: "<a href='./Vue.html'>I Like You</a>",
+                imgurl: 'https://cn.vuejs.org/images/logo.png'
+            },
+            methods: {
+                text(){
+                    alert(1)
+                }
+            }
+        })
+    </script>
+
+</body>
+</html>
